@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/log_img1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/img1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"/>
+    <TextView
+        android:id="@+id/log_txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/log_img1"
+        android:text="Hello Again!"
+        android:layout_marginTop="-40dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/poppinsbold"
+        android:textSize="25dp"
+        android:textColor="@color/black"/>
+<!--    <TextView-->
+<!--        android:id="@+id/log_txt2"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/log_txt1"-->
+<!--        android:text="Welcome back, you've been missed!"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:fontFamily="@font/poppinsregular"-->
+<!--        android:textSize="15dp"-->
+<!--        android:textColor="@color/black"/>-->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/log_txt2"
+        android:src="@drawable/img_login"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/log_txt1"
+        android:layout_centerHorizontal="true"/>
+    <LinearLayout
+        android:id="@+id/ly1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/log_txt2"
+        android:padding="40dp">
+
+        <EditText
+            android:id="@+id/edt_email"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/btn_shape"
+            android:backgroundTint="@color/edttext"
+            android:paddingLeft="20dp"
+            android:fontFamily="@font/poppinsregular"
+            android:hint="E-mail"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/black">
+
+            <EditText
+                android:id="@+id/edt_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_shape"
+                android:backgroundTint="@color/edttext"
+                android:paddingLeft="20dp"
+                android:fontFamily="@font/poppinsregular"
+                android:inputType="textPassword"
+                android:hint="Password"/>
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_login"
+        android:layout_marginLeft="50dp"
+        android:fontFamily="@font/poppinssemibold"
+        android:textSize="14dp"
+        android:textColor="@color/primary"
+        android:text="Forget Password?"
+        android:onClick="onForgetPasswordClicked"/>
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign In"
+        android:layout_below="@+id/ly1"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/btn_shape"
+        android:textSize="15dp"
+        android:width="300dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/btn_login"
+        android:gravity="center"
+        android:layout_marginTop="25dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Not have an account? "
+            android:fontFamily="@font/poppinsregular"
+            android:textSize="14dp"/>
+        <TextView
+            android:id="@+id/txt_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register here "
+            android:fontFamily="@font/poppinssemibold"
+            android:textSize="14dp"
+            android:textColor="@color/primary"
+            android:onClick="onRegisterClicked"/>
+    </LinearLayout>
+
+</RelativeLayout>

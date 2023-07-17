@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Electronic</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Inventory</string>
+    <string name="title_supplier">Supplier</string>
+    <string name="title_driver">Driver</string>
+    <string name="title_profile">List Users</string>
+</resources>
